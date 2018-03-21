@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dmelehov
- * Date: 3/20/18
- * Time: 3:27 PM
- */
+
+function  ft_split($s1)
+{
+    $array = array_filter(explode(" ", $s1));
+    sort($array);
+    return  $array;
+}
+
+?>
+

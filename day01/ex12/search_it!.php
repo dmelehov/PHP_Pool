@@ -1,7 +1,16 @@
+#!/usr/bin/php
 <?php
-/**
- * Created by PhpStorm.
- * User: dmelehov
- * Date: 3/20/18
- * Time: 7:56 PM
- */
+if ($argc < 3) {
+    exit();
+}
+$search = $argv[1];
+unset($argv[0], $argv[1]);
+$argv = array_reverse($argv);
+foreach ($argv as $v){
+    $tmp = explode(":", $v);
+    if ($search === $tmp[0]){
+        echo $tmp[1]."\n";
+        exit();
+    }
+}
+?>

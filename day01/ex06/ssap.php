@@ -1,7 +1,14 @@
+#!/usr/bin/php
 <?php
-/**
- * Created by PhpStorm.
- * User: dmelehov
- * Date: 3/20/18
- * Time: 5:19 PM
- */
+$res = array();
+unset($argv[0]);
+foreach ($argv as $value) {
+    $tmp = array_filter(explode(" ", $value));
+    foreach ($tmp as $value2)
+        $res[] = $value2;
+}
+sort($res);
+foreach ($res as $value) {
+    echo "$value\n";
+}
+?>
